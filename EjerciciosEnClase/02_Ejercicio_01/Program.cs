@@ -22,8 +22,6 @@ namespace _02_Ejercicio_01
             per2.MostrarInformacion();
 
 
-
-
             #region Codigo obsoleto
             //string[] usuarios = new string[3];
             //usuarios[0] = "juampi";
@@ -53,9 +51,6 @@ namespace _02_Ejercicio_01
             //    }
             //}
             #endregion
-
-
-
 
 
         }
