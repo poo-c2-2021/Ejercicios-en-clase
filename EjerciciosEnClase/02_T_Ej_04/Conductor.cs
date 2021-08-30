@@ -9,32 +9,36 @@ namespace _02_T_Ej_04
     public class Conductor
     {
         string nombre;
-        public int[] kms;
 
-        public Conductor(string nombre)
+        public Conductor(string nombre, int[] kms)
         {
             this.nombre = nombre;
-            kms = new int[7];
+            this.kms = kms;
         }
 
-        public Conductor(string nombre,int[] kmsCargados)
+        public double KmTotales()
         {
-            this.nombre = nombre;
-            this.kms = kmsCargados;
+            double aux=0;
+            for (int i = 0; i < kms.Length; i++)
+            {
+                aux += kms[i];
+            }
+            return aux;
         }
 
-
-
-        public void CargarKm(int km, int dia)
+        public int GetDia3()
         {
-            kms[dia - 1] = km;
+            return kms[2];
+        }
+        
+        public int GetDia5()
+        {
+            return kms[4];
         }
 
-
-
-
-
-
-
+        public string MostrarNombre()
+        {
+          return this.nombre;
+        }
     }
 }
