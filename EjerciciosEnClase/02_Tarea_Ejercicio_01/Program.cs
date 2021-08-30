@@ -33,8 +33,8 @@ namespace _02_Tarea_Ejercicio_01
             Alumno a3 = new Alumno("Eze", "Quiel", 9, 6);
 
             Console.WriteLine($"Promedio alumno 1:  {a1.MostrarPromedio()}");
-            Console.WriteLine($"Promedio alumno 1:  {a2.MostrarPromedio()}");
-            Console.WriteLine($"Promedio alumno 1:  {a3.MostrarPromedio()}");
+            Console.WriteLine($"Promedio alumno 2:  {a2.MostrarPromedio()}");
+            Console.WriteLine($"Promedio alumno 3:  {a3.MostrarPromedio()}");
 
 
         }
