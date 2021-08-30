@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _02_Tarea_Ejercicio_01
+namespace _02_T_Ej_01
 {
     class Program
     {
