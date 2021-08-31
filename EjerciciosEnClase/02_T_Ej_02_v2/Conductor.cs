@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_T_Ej_04
+namespace _02_T_Ej_04_v2
 {
     public class Conductor
     {
@@ -19,7 +19,7 @@ namespace _02_T_Ej_04
 
         public double KmTotales()
         {
-            double aux=0;
+            double aux = 0;
             for (int i = 0; i < kms.Length; i++)
             {
                 aux += kms[i];
@@ -31,7 +31,7 @@ namespace _02_T_Ej_04
         {
             return kms[2];
         }
-        
+
         public int GetDia5()
         {
             return kms[4];
@@ -39,7 +39,7 @@ namespace _02_T_Ej_04
 
         public string MostrarNombre()
         {
-          return this.nombre;
+            return this.nombre;
         }
     }
 }
