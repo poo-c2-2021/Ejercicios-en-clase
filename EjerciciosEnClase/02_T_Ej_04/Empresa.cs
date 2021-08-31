@@ -46,7 +46,6 @@ namespace _02_T_Ej_04
                     {
                         auxConductor = conductores[i];
                     }
-                    
                 }
             }
 
