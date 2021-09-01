@@ -29,10 +29,6 @@ namespace Clase_04
             return !(a1 == a2);
         }
 
-        public static explicit operator Alumno(Aula aula)
-        {
-            return new Alumno("",123);
-        }
-
+     
     }
 }
