@@ -19,6 +19,8 @@ namespace HeroeApp
 
         public FrmHereo()
         {
+            //primero
+            MessageBox.Show("new");
             InitializeComponent();
         }
 
@@ -40,7 +42,30 @@ namespace HeroeApp
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(this.txtNombre.Text);
+            //MessageBox.Show(this.txtNombre.Text);
+        }
+
+        private void FrmHereo_Activated(object sender, EventArgs e)
+        {
+            //tercero
+            //MessageBox.Show("activate");
+        }
+
+        private void FrmHereo_Load(object sender, EventArgs e)
+        {
+            //segundo
+            MessageBox.Show("load");
+        }
+
+        private void FrmHereo_Paint(object sender, PaintEventArgs e)
+        {
+            //cuarto
+            //MessageBox.Show("paint");
+        }
+
+        private void FrmHereo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //se esta por cerrar
         }
     }
 }

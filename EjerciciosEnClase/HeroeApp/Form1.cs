@@ -20,6 +20,7 @@ namespace HeroeApp
         public FrmUniverso()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
             universo = (Universo)8;
 
         }
@@ -35,6 +36,32 @@ namespace HeroeApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void FrmUniverso_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmEscenario frmEscenario = new FrmEscenario();
+            frmEscenario.MdiParent = this;
+            frmEscenario.Show();
+            
+        }
+
+        private void FrmModal_Click(object sender, EventArgs e)
+        {
+            FrmEscenario frmEscenario = new FrmEscenario();
+            frmEscenario.ShowDialog() ;
 
         }
     }

@@ -91,10 +91,12 @@ namespace HeroeApp
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(127, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(137, 23);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.Visible = false;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // chkEsAyudante
@@ -111,7 +113,6 @@ namespace HeroeApp
             // 
             // cmbPoder
             // 
-            this.cmbPoder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPoder.FormattingEnabled = true;
             this.cmbPoder.Items.AddRange(new object[] {
             "Telepatia",
@@ -147,8 +148,14 @@ namespace HeroeApp
             this.Controls.Add(this.numNivelFuerza);
             this.Controls.Add(this.lblPoder);
             this.Controls.Add(this.lblNombre);
+            this.Location = new System.Drawing.Point(1500, 0);
             this.Name = "FrmHereo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmHereo";
+            this.Activated += new System.EventHandler(this.FrmHereo_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHereo_FormClosing);
+            this.Load += new System.EventHandler(this.FrmHereo_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmHereo_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.numNivelFuerza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

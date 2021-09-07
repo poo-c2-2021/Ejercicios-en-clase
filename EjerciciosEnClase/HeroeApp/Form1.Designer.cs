@@ -32,6 +32,9 @@ namespace HeroeApp
             this.btnNuevoHeroe = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCrearE = new System.Windows.Forms.Button();
+            this.FrmModal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNuevoHeroe
@@ -61,17 +64,54 @@ namespace HeroeApp
             this.txtNombre.Size = new System.Drawing.Size(100, 23);
             this.txtNombre.TabIndex = 4;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCrearE
+            // 
+            this.btnCrearE.Location = new System.Drawing.Point(42, 61);
+            this.btnCrearE.Name = "btnCrearE";
+            this.btnCrearE.Size = new System.Drawing.Size(154, 49);
+            this.btnCrearE.TabIndex = 6;
+            this.btnCrearE.Text = "Crear";
+            this.btnCrearE.UseVisualStyleBackColor = true;
+            this.btnCrearE.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // FrmModal
+            // 
+            this.FrmModal.Location = new System.Drawing.Point(503, 85);
+            this.FrmModal.Name = "FrmModal";
+            this.FrmModal.Size = new System.Drawing.Size(94, 44);
+            this.FrmModal.TabIndex = 8;
+            this.FrmModal.Text = "Modal";
+            this.FrmModal.UseVisualStyleBackColor = true;
+            this.FrmModal.Click += new System.EventHandler(this.FrmModal_Click);
+            // 
+            // FrmUniverso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(446, 331);
+            this.ClientSize = new System.Drawing.Size(765, 431);
+            this.Controls.Add(this.FrmModal);
+            this.Controls.Add(this.btnCrearE);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnNuevoHeroe);
-            this.Name = "Form1";
+            this.IsMdiContainer = true;
+            this.Location = new System.Drawing.Point(2000, 0);
+            this.Name = "FrmUniverso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Titulo del formulario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUniverso_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,6 +123,9 @@ namespace HeroeApp
         private System.Windows.Forms.Button btnNuevoHeroe;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCrearE;
+        private System.Windows.Forms.Button FrmModal;
     }
 }
 
