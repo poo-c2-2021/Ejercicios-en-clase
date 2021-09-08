@@ -8,51 +8,35 @@ namespace Colecciones
     {
         static void Main(string[] args)
         {
+            List<string> aulaAux = new List<string>()
+            {
+                "martin","martina","rodolfa","eusebio"
+            };
+
+            List<string> aula1 = new List<string>();
+
+            aula1.Add("carola");
+            aula1.Add("juana");
+            aula1.Add("dumbo");
+
+            List<string> aula2 = new List<string>(aula1);
+
+
+            aula2.AddRange(aulaAux);
+
+            aula1.RemoveAt(1);
+
+            foreach (string item in aula1)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("------------------------");
             
-
-            List<string> listasNombres = new List<string>();
-
-            string a = "pepe";
-            listasNombres.Add(a);
-            listasNombres.Add("carola");
-            listasNombres.Add("juana");
-            listasNombres.Add("dumbo");
-
-            foreach (string item in listasNombres)
+            foreach (string item in aula2)
             {
-               
-                    Console.WriteLine(item);
-                
+                Console.WriteLine(item);
             }
-
-            listasNombres.Remove(a);
-
-            Console.WriteLine(a);
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-            foreach (string item in listasNombres)
-            {
-               
-                    Console.WriteLine(item);
-               
-
-            }
-
-
-
-
-
-
-
-
-            List<float> listFloat = new List<float>();
-
-            listFloat.Add(12);
-            listFloat.Add(14);
-
 
 
 
