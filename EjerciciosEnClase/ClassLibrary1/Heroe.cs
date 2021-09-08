@@ -72,7 +72,21 @@ namespace Entidades
         }
 
         #endregion
+        private string HeroeToString2()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Nombre: {this.GetNombre()}");
+            sb.AppendLine($"Poder: {this.GetPoder()}");
+            sb.AppendLine($"Nivel de Fuerza: {this.GetNivelFuerza()}");
 
+            if (this.GetEsAyudante())
+                sb.AppendLine($"Es ayudante?: SI");
+            else
+                sb.AppendLine($"Es ayudante?: NO");
+
+            return sb.ToString();
+            // return $"Nombre: {nombre}\nPoder: {poder}\nNivel fuerza: {nivelFuerza}\nEs ayudante: {esAyudante}";
+        }
         public string HeroeToString()
         {
             StringBuilder sb = new StringBuilder();

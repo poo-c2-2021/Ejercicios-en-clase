@@ -12,8 +12,14 @@ namespace Colecciones
             {
                 "martin","martina","rodolfa","eusebio"
             };
+           
+            aulaAux.Add("nico");
+
+
+
 
             List<string> aula1 = new List<string>();
+
 
             aula1.Add("carola");
             aula1.Add("juana");
@@ -21,6 +27,7 @@ namespace Colecciones
 
             List<string> aula2 = new List<string>(aula1);
 
+            aula2 = aula1;
 
             aula2.AddRange(aulaAux);
 

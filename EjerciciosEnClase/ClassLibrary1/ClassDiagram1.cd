@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Entidades.Heroe">
+    <Position X="0.5" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACACABAgIQAAEEAGAAQAAAAiAAAAAAAA=</HashCode>
+      <FileName>Heroe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Universo">
+    <Position X="4.5" Y="0.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>IAgACAIAAAAAAECAQAAAACAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Universo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
