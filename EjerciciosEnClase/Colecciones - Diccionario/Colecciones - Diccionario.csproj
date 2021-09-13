@@ -6,4 +6,8 @@
     <RootNamespace>Colecciones___Diccionario</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Entidades.csproj" />
+  </ItemGroup>
+
 </Project>
