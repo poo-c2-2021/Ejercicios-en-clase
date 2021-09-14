@@ -30,7 +30,7 @@ namespace Clase_07_UI_2
         private void InitializeComponent()
         {
             this.btn_alta = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.rtx_catalogo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btn_alta
@@ -43,24 +43,24 @@ namespace Clase_07_UI_2
             this.btn_alta.UseVisualStyleBackColor = true;
             this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
             // 
-            // listBox1
+            // rtx_catalogo
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(427, 112);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(191, 214);
-            this.listBox1.TabIndex = 1;
+            this.rtx_catalogo.Location = new System.Drawing.Point(289, 112);
+            this.rtx_catalogo.Name = "rtx_catalogo";
+            this.rtx_catalogo.Size = new System.Drawing.Size(213, 214);
+            this.rtx_catalogo.TabIndex = 2;
+            this.rtx_catalogo.Text = "";
             // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.rtx_catalogo);
             this.Controls.Add(this.btn_alta);
             this.Name = "Menu_Principal";
             this.Text = "Menu_Principal";
+            this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.ResumeLayout(false);
 
         }
@@ -68,6 +68,6 @@ namespace Clase_07_UI_2
         #endregion
 
         private System.Windows.Forms.Button btn_alta;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.RichTextBox rtx_catalogo;
     }
 }

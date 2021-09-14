@@ -34,14 +34,19 @@ namespace Entidades
         }
         public EMarca Marca
         {
-            get { return marca ; }
-            set { marca  = value; }
+            get { return marca; }
+            set { marca = value; }
         }
 
-        public override string ToString()
+        public string Informacion
         {
-            return $"{this.marca} , {this.modelo}";
+            get
+            {
+                return $"{this.marca} , {this.modelo} \n";
+            }
         }
+
+
 
     }
 }

@@ -18,6 +18,11 @@ namespace Clase_07_UI_2
         {
             InitializeComponent();
             listaGuitarras = new List<Guitarra>();
+
+        }
+        private void Menu_Principal_Load(object sender, EventArgs e)
+        {
+            rtx_catalogo.Text = "";
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
@@ -26,28 +31,16 @@ namespace Clase_07_UI_2
 
             Alta_Instrumento frmAlta = new Alta_Instrumento();
 
-
             if(frmAlta.ShowDialog() == DialogResult.OK)
             {
                 aux = frmAlta.InfoGuitarra;
 
                 listaGuitarras.Add(aux);
-                RefrescarListBox();
 
-
+                rtx_catalogo.Text += aux.Informacion;
 
             }
         }
-
-        private void RefrescarListBox()
-        {
-
-            listBox1.DataSource = null;
-            listBox1.DataSource = listaGuitarras;
-
-        }
-
-
 
     }
 }
