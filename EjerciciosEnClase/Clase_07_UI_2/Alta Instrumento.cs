@@ -17,14 +17,16 @@ namespace Clase_07_UI_2
 
         Guitarra auxGuitarra;
 
-        public Guitarra InfoGuitarra
-        {
+        public Guitarra GuitarraCreada // SOLO LECTURA
+        { 
             get
             {
                 return auxGuitarra;
             }
+          
         }
 
+    
 
 
         public Alta_Instrumento()
@@ -34,22 +36,31 @@ namespace Clase_07_UI_2
         }
         private void Alta_Instrumento_Load(object sender, EventArgs e)
         {
-            this.comboBox1.DataSource = Enum.GetValues(typeof(EMarca));
+            this.cbx_marca.DataSource = Enum.GetValues(typeof(EMarca));
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
 
-            EMarca auxDato = (EMarca)comboBox1.SelectedItem;
+            EMarca auxDato = (EMarca)cbx_marca.SelectedItem;
 
-            auxGuitarra = new Guitarra(auxDato, this.textBox1.Text, 20000);
+            if (auxDato.ToString() != "" && this.txt_modelo.Text.Length != 0)
+            {
+                auxGuitarra = new Guitarra(auxDato, this.txt_modelo.Text, 20000);
 
-            this.DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Guitarra no creada correctamente. Verifique datos");
+            }
 
 
         }
 
-
-
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }
