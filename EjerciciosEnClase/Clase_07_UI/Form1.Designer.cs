@@ -29,33 +29,33 @@ namespace Clase_07_UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_cuadritoDeTexto = new System.Windows.Forms.TextBox();
+            this.btn_MostrarInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_cuadritoDeTexto
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 0;
+            this.txt_cuadritoDeTexto.Location = new System.Drawing.Point(209, 93);
+            this.txt_cuadritoDeTexto.Name = "txt_cuadritoDeTexto";
+            this.txt_cuadritoDeTexto.Size = new System.Drawing.Size(125, 27);
+            this.txt_cuadritoDeTexto.TabIndex = 0;
             // 
-            // button1
+            // btn_MostrarInfo
             // 
-            this.button1.Location = new System.Drawing.Point(240, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_MostrarInfo.Location = new System.Drawing.Point(240, 199);
+            this.btn_MostrarInfo.Name = "btn_MostrarInfo";
+            this.btn_MostrarInfo.Size = new System.Drawing.Size(277, 29);
+            this.btn_MostrarInfo.TabIndex = 1;
+            this.btn_MostrarInfo.Text = "Mostrar Informacion";
+            this.btn_MostrarInfo.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_MostrarInfo);
+            this.Controls.Add(this.txt_cuadritoDeTexto);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -66,8 +66,8 @@ namespace Clase_07_UI
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_cuadritoDeTexto;
+        private System.Windows.Forms.Button btn_MostrarInfo;
     }
 }
 
