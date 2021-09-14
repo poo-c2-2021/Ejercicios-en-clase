@@ -17,23 +17,39 @@ namespace Clase_07_UI_2
 
         Guitarra auxGuitarra;
 
+        public Guitarra InfoGuitarra
+        {
+            get
+            {
+                return auxGuitarra;
+            }
+        }
+
+
+
         public Alta_Instrumento()
         {
             InitializeComponent();
-          
+
+        }
+        private void Alta_Instrumento_Load(object sender, EventArgs e)
+        {
+            this.comboBox1.DataSource = Enum.GetValues(typeof(EMarca));
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
 
-            auxGuitarra = new Guitarra(EMarca.Cort, "pepe", 20000);
+            EMarca auxDato = (EMarca)comboBox1.SelectedItem;
+
+            auxGuitarra = new Guitarra(auxDato, this.textBox1.Text, 20000);
+
+            this.DialogResult = DialogResult.OK;
 
 
         }
 
-        private void Alta_Instrumento_Load(object sender, EventArgs e)
-        {
-            this.comboBox1.DataSource = Enum.GetValues(typeof(EMarca));
-        }
+
+
     }
 }

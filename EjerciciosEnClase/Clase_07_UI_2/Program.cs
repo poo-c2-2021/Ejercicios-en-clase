@@ -17,7 +17,7 @@ namespace Clase_07_UI_2
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Alta_Instrumento());
+            Application.Run(new Menu());
         }
     }
 }
