@@ -46,7 +46,7 @@ namespace Entidades
             clienteHistorico = null;
         }
 
-        public Cliente()
+        private Cliente()
         {
             ultimoIdRegistrado++;
             this.id = ultimoIdRegistrado;
