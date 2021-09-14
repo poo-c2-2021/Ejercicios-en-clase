@@ -9,13 +9,13 @@ namespace Entidades
     public class Guitarra
     {
 
-        private string marca ;
+        private EMarca marca;
 
         private string modelo;
 
         private int precio;
 
-        public Guitarra(string marca, string modelo, int precio)
+        public Guitarra(EMarca marca, string modelo, int precio)
         {
             this.marca = marca;
             this.modelo = modelo;
@@ -32,7 +32,7 @@ namespace Entidades
             get { return modelo; }
             set { modelo = value; }
         }
-        public string Marca
+        public EMarca Marca
         {
             get { return marca ; }
             set { marca  = value; }

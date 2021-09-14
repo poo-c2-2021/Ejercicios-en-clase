@@ -39,6 +39,7 @@ namespace Clase_07_UI_2
             this.txt_info.Location = new System.Drawing.Point(205, 105);
             this.txt_info.Name = "txt_info";
             this.txt_info.PlaceholderText = "Aca va la info";
+            this.txt_info.ReadOnly = true;
             this.txt_info.Size = new System.Drawing.Size(242, 27);
             this.txt_info.TabIndex = 0;
             // 
@@ -57,6 +58,7 @@ namespace Clase_07_UI_2
             this.txt_nombreCliente.Location = new System.Drawing.Point(205, 59);
             this.txt_nombreCliente.Name = "txt_nombreCliente";
             this.txt_nombreCliente.PlaceholderText = "Aca va la info";
+            this.txt_nombreCliente.ReadOnly = true;
             this.txt_nombreCliente.Size = new System.Drawing.Size(242, 27);
             this.txt_nombreCliente.TabIndex = 2;
             // 
