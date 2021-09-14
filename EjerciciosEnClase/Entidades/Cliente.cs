@@ -12,7 +12,6 @@ namespace Entidades
         private static Cliente clienteHistorico;
         private static int ultimoIdRegistrado;
 
-
         public int Id
         {
             get { return id; }
