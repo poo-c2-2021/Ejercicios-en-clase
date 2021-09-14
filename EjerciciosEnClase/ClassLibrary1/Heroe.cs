@@ -8,12 +8,14 @@ namespace Entidades
 {
     public class Heroe
     {
-        string nombre;
+        private string nombre;
         string poder;
         int nivelFuerza;
         bool esAyudante;
 
-        
+        public string Debilidad { get; set; }
+
+
         public Heroe(string nombre, string poder, int nivelFuerza)
         {
             this.SetNombre(nombre);
@@ -21,6 +23,28 @@ namespace Entidades
             this.SetNivelFuerza(nivelFuerza);
             this.SetEsAyudante(this.GetNivelFuerza() < 50);
         }
+
+        #region Propiedades
+
+        public string Nombre
+        {
+            get  // lo usamos para devolver un valor
+            {
+                //  string nombre="";
+                if (nombre != "")
+                    return $"El nombre es: {nombre}";
+                else
+                    return "sin nombre";
+            }
+            //private set // lo usamos para dar visibilidad de escritura
+            //{
+            //    if (value.Length > 5)
+            //        this.nombre = value;
+            //}
+        }
+
+
+        #endregion
 
         #region get/set
         public string GetNombre()
@@ -33,7 +57,7 @@ namespace Entidades
             if (string.IsNullOrEmpty(nombreQueLlega))
                 return false;
 
-            this.nombre = nombreQueLlega;
+          
             return true;
         }
 
@@ -50,15 +74,15 @@ namespace Entidades
 
         public int GetNivelFuerza()
         {
-            
+
             return this.nivelFuerza;
         }
 
         public void SetNivelFuerza(int nivelFuerza)
         {
-            
-            if ( nivelFuerza >= 0)
-                this.nivelFuerza =  nivelFuerza;
+
+            if (nivelFuerza >= 0)
+                this.nivelFuerza = nivelFuerza;
         }
 
         public bool GetEsAyudante()
