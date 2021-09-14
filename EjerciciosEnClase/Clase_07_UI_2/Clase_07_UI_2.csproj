@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MenuPrincipal" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="MenuPrincipal" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
   </ItemGroup>
 

@@ -9,10 +9,10 @@ namespace Entidades
 
     public enum EMarca
     {
-        Gibson = 1930,
+        Gibson =1930,
         Fender = 1899,
         Epiphone = 1950,
-        Texas = 1990,
-        Cort = 2000
+        Texas = 2000,
+        Cort = 2001
     }
 }

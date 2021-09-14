@@ -32,11 +32,12 @@ namespace Clase_07_UI_2
             this.txt_info = new System.Windows.Forms.TextBox();
             this.btn_mostrar = new System.Windows.Forms.Button();
             this.txt_nombreCliente = new System.Windows.Forms.TextBox();
+            this.txt_anio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_info
             // 
-            this.txt_info.Location = new System.Drawing.Point(205, 105);
+            this.txt_info.Location = new System.Drawing.Point(421, 113);
             this.txt_info.Name = "txt_info";
             this.txt_info.PlaceholderText = "Aca va la info";
             this.txt_info.ReadOnly = true;
@@ -45,7 +46,7 @@ namespace Clase_07_UI_2
             // 
             // btn_mostrar
             // 
-            this.btn_mostrar.Location = new System.Drawing.Point(230, 191);
+            this.btn_mostrar.Location = new System.Drawing.Point(446, 199);
             this.btn_mostrar.Name = "btn_mostrar";
             this.btn_mostrar.Size = new System.Drawing.Size(184, 29);
             this.btn_mostrar.TabIndex = 1;
@@ -55,18 +56,28 @@ namespace Clase_07_UI_2
             // 
             // txt_nombreCliente
             // 
-            this.txt_nombreCliente.Location = new System.Drawing.Point(205, 59);
+            this.txt_nombreCliente.Location = new System.Drawing.Point(421, 67);
             this.txt_nombreCliente.Name = "txt_nombreCliente";
             this.txt_nombreCliente.PlaceholderText = "Aca va la info";
             this.txt_nombreCliente.ReadOnly = true;
             this.txt_nombreCliente.Size = new System.Drawing.Size(242, 27);
             this.txt_nombreCliente.TabIndex = 2;
             // 
+            // txt_anio
+            // 
+            this.txt_anio.Location = new System.Drawing.Point(421, 157);
+            this.txt_anio.Name = "txt_anio";
+            this.txt_anio.PlaceholderText = "Aca va la info";
+            this.txt_anio.ReadOnly = true;
+            this.txt_anio.Size = new System.Drawing.Size(242, 27);
+            this.txt_anio.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txt_anio);
             this.Controls.Add(this.txt_nombreCliente);
             this.Controls.Add(this.btn_mostrar);
             this.Controls.Add(this.txt_info);
@@ -82,6 +93,7 @@ namespace Clase_07_UI_2
         private System.Windows.Forms.TextBox txt_info;
         private System.Windows.Forms.Button btn_mostrar;
         private System.Windows.Forms.TextBox txt_nombreCliente;
+        private System.Windows.Forms.TextBox txt_anio;
     }
 }
 

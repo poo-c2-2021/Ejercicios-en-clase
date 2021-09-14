@@ -35,11 +35,13 @@ namespace Clase_07_UI_2
         private void btn_mostrar_Click(object sender, EventArgs e)
         {
 
-            this.txt_nombreCliente.Text = cliente1.Nombre;
+            this.txt_nombreCliente.Text = cliente2.Nombre;
 
             if (cliente1.Instrumento != null)
             {
-                this.txt_info.Text = cliente1.Instrumento.Precio.ToString();
+                this.txt_info.Text = cliente2.Instrumento.Precio.ToString();
+                this.txt_anio.Text = cliente2.Instrumento.Marca.ToString();
+                // this.txt_anio.Text = ((int)cliente2.Instrumento.Marca).ToString();
             }
             else
             {
