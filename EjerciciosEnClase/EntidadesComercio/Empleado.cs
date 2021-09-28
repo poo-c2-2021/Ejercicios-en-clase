@@ -10,8 +10,18 @@ namespace EntidadesComercio
     {
 
         public float Sueldo { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="cuil"></param>
+        /// <param name="sueldo"></param>
+        /// <exception cref="PersonaException"></exception>
         public Empleado(string nombre, double cuil, float sueldo) : base(nombre, cuil)
         {
+
             this.Sueldo = sueldo;
         }
 

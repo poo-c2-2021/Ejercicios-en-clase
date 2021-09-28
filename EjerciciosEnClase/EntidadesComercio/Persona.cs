@@ -9,6 +9,7 @@ namespace EntidadesComercio
     public abstract class Persona
     {
         private double cuil;
+        private string nombre;
         public double Cuil
         {
             get
@@ -21,13 +22,50 @@ namespace EntidadesComercio
                 {
                     this.cuil = value;
                 }
+                else
+                {
+                    CuilException cuilException = new CuilException();
+                    throw cuilException;
+                    this.cuil = 111111;
+                }
             }
         }
-        public string Nombre { get; set; }
+        public string Nombre { get
+            {
+                return nombre;
+            }
+            set
+            {
+                string auxNombre = value;
+                foreach (Char caracter in auxNombre.ToCharArray())
+                {
+                    if (Char.IsDigit(caracter))
+                    {
+                        throw new NombreException(auxNombre);
+                    }
+
+                } 
+                this.nombre = auxNombre;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="cuil"></param>
+        /// <exception cref="PersonaException"></exception>
         public Persona(string nombre, double cuil)
         {
-            this.Cuil = cuil;
-            this.Nombre = nombre;
+            try
+            {
+                this.Cuil = cuil;
+                this.Nombre = nombre;
+             }
+            catch(Exception excp)
+            {
+                throw new PersonaException("Error al crear Persona", excp);
+            }
         }
 
         public abstract string Mostrar();

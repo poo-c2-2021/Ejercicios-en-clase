@@ -28,29 +28,57 @@ namespace ComercioUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+          
 
-
-            switch ((ETipoEmpleado)this.cmbTipoEmpleado.SelectedItem)
+            
+            try
             {
-                case ETipoEmpleado.Empleado:
-                    this.persona = new Empleado(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text));
-                    break;
-                case ETipoEmpleado.Jefe:
-                    this.persona = new Jefe(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text), int.Parse(this.txtBono.Text));
-                    break;
-                case ETipoEmpleado.Vendedor:
-                    this.persona = new Vendedor(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text), int.Parse(this.txtObjetivo.Text));
-                    break;
+
+                
+
+                switch ((ETipoEmpleado)this.cmbTipoEmpleado.SelectedItem)
+                {
+                    case ETipoEmpleado.Empleado:
+                        this.persona = new Empleado(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text));
+                        break;
+                    case ETipoEmpleado.Jefe:
+                        this.persona = new Jefe(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text), int.Parse(this.txtBono.Text));
+                        break;
+                    case ETipoEmpleado.Vendedor:
+                        this.persona = new Vendedor(this.txtNombre.Text, double.Parse(this.txtCuil.Text), float.Parse(this.txtSueldo.Text), int.Parse(this.txtObjetivo.Text));
+                        break;
+                }
+
+
+
+
+                if (this.persona.Cuil != 0)
+                    this.DialogResult = DialogResult.OK;
+                else
+                    MessageBox.Show("Error en el cuil");
+
+                this.limpiar();
+
             }
-            if (this.persona.Cuil != 0)
-                this.DialogResult = DialogResult.OK;
-            else
-                MessageBox.Show("Error en el cuil");
+            catch (CuilException)
+            {
+                MessageBox.Show("verifique el cuil");
+            }
+            catch (NombreException nmbreex)
+            {
 
+                MessageBox.Show(nmbreex.Message);
+                
+            }
+            catch(Exception e)
+            {
+
+            }
+            finally
+            {
+                this.limpiar();
+            }
             this.limpiar();
-
-
-
         }
 
         private void cmbTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
