@@ -25,12 +25,15 @@ namespace EntidadesComercio
                 else
                 {
                     CuilException cuilException = new CuilException();
+                    cuilException.Cuil = cuil;
                     throw cuilException;
-                    this.cuil = 111111;
+                    
                 }
             }
         }
-        public string Nombre { get
+        public string Nombre
+        {
+            get
             {
                 return nombre;
             }
@@ -41,10 +44,12 @@ namespace EntidadesComercio
                 {
                     if (Char.IsDigit(caracter))
                     {
-                        throw new NombreException(auxNombre);
+                        NombreException nomEx = new NombreException(auxNombre)
+                        nomEx.Nombre = nomEx;
+                        throw Nombre;
                     }
 
-                } 
+                }
                 this.nombre = auxNombre;
             }
         }
@@ -61,8 +66,8 @@ namespace EntidadesComercio
             {
                 this.Cuil = cuil;
                 this.Nombre = nombre;
-             }
-            catch(Exception excp)
+            }
+            catch (Exception excp)
             {
                 throw new PersonaException("Error al crear Persona", excp);
             }

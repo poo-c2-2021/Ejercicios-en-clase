@@ -13,6 +13,15 @@ namespace EntidadesComercio
 
         }
 
+        private string nombre;
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+
         public override string Message {
             get
             {

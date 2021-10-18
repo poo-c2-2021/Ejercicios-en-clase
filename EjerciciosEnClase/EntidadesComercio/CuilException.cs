@@ -8,6 +8,14 @@ namespace EntidadesComercio
 {
     public class CuilException : Exception
     {
-        
+        private double cuil;
+
+        public double Cuil
+        {
+            get { return cuil; }
+            set { cuil = value;
+           
+        }
+
     }
 }

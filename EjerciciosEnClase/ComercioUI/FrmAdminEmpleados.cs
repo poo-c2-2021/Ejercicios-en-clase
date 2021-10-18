@@ -23,6 +23,15 @@ namespace ComercioUI
         private void FrmAdminEmpleados_Load(object sender, EventArgs e)
         {
 
+            List<Persona> personas = new List<Persona>()
+            {
+                new Jefe(){Bono=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
+                new Jefe(){Bono=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
+                new Empleado(){Cuil=254513,Nombre="dasdas",Sueldo=455 },
+                new Empleado(){Cuil=254513,Nombre="dasdas",Sueldo=455 },
+                new Vendedor(){Objetivo=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
+                new Vendedor(){Objetivo=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
+            }
             this.cmbTipoEmpleado.DataSource = Enum.GetValues(typeof(ETipoEmpleado));
         }
 
