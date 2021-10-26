@@ -85,7 +85,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 16", "Clase 16", "{DD1BA642-D0DD-4B00-BA52-D2826EA55E2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chatUI", "chatUI\chatUI.csproj", "{7237E461-9AC0-4957-ACE7-0EAE711CED88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatUI", "chatUI\ChatUI.csproj", "{7237E461-9AC0-4957-ACE7-0EAE711CED88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MensajesEntidades", "MensajesEntidades\MensajesEntidades.csproj", "{69DF637D-A0FA-4D17-86A4-30E806CEAE49}"
 EndProject
