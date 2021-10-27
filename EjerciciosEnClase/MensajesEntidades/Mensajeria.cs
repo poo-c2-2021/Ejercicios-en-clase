@@ -9,6 +9,19 @@ namespace MensajesEntidades
     public class Mensajeria
     {
         static List<Usuario> usuarios;
+        public static Usuario usuarioLogueado;
+
+
+        public static bool TieneUsuario()
+        {
+            return !(Mensajeria.usuarioLogueado is null);
+        }
+
+        public static void Loguear(Usuario usuario)
+        {
+            DB miBase = new DB("Data Source=190.210.161.90;Integrated Security=false;User ID=alumno;Password=alumno;Initial Catalog=UTN");
+            Mensajeria.usuarioLogueado = miBase.LoguearUsuarios(usuario);            
+        }
 
         public static bool BuscarUSuarios()
         {
