@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelegadosUI
+namespace DelegadosEntidades
 {
 
     public delegate void ReservaEvento();

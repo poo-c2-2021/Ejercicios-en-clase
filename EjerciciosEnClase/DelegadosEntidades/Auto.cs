@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelegadosUI
+namespace DelegadosEntidades
 {
-    public class Auto
+    public class Auto :Ivalidadora
     {
 
 
@@ -30,7 +30,7 @@ namespace DelegadosUI
         static Auto()
         {
             kilometrosPorLitro = 10;
-            
+
         }
 
 
@@ -83,5 +83,21 @@ namespace DelegadosUI
             this.litrosNafta = this.litrosNafta + 10;
         }
 
+        public override string ToString()
+        {
+            return this.NombreAuto + "  - " + this.litrosNafta;
+        }
+
+        public static int ordenar(Auto segundoAuto, Auto auto1)
+        {
+            if (auto1.Litros != segundoAuto.Litros)
+                return auto1.Litros - segundoAuto.Litros;
+            return auto1.NombreAuto.CompareTo(segundoAuto.NombreAuto);
+        }
+
+        bool Ivalidadora.Validar()
+        {
+            return this.kilometros >= 0;
+        }
     }
 }

@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DelegadosEntidades\DelegadosEntidades.csproj" />
+  </ItemGroup>
+
 </Project>
