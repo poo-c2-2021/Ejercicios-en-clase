@@ -25,13 +25,13 @@ namespace ComercioUI
 
             List<Persona> personas = new List<Persona>()
             {
-                new Jefe(){Bono=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
-                new Jefe(){Bono=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
-                new Empleado(){Cuil=254513,Nombre="dasdas",Sueldo=455 },
-                new Empleado(){Cuil=254513,Nombre="dasdas",Sueldo=455 },
-                new Vendedor(){Objetivo=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
-                new Vendedor(){Objetivo=444,Cuil=254513,Nombre="dasdas",Sueldo=455 },
-            }
+                new Jefe(bono:444,cuil:254513,nombre:"dasdas",sueldo:455 ),
+                new Jefe(bono:444,cuil:254513,nombre:"dasdas",sueldo:455 ),
+                new Empleado(cuil:254513,nombre:"dasdas",sueldo:455 ),
+                new Empleado(cuil:254513,nombre:"dasdas",sueldo:455 ),
+                new Vendedor(objetivo:444,cuil:254513,nombre:"dasdas",sueldo:455 ),
+                new Vendedor(objetivo:444,cuil:254513,nombre:"dasdas",sueldo:455 )
+            };
             this.cmbTipoEmpleado.DataSource = Enum.GetValues(typeof(ETipoEmpleado));
         }
 
@@ -79,7 +79,7 @@ namespace ComercioUI
                 MessageBox.Show(nmbreex.Message);
                 
             }
-            catch(Exception e)
+            catch(Exception ec)
             {
 
             }

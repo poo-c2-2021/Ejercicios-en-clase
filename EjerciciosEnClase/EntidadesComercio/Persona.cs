@@ -44,9 +44,9 @@ namespace EntidadesComercio
                 {
                     if (Char.IsDigit(caracter))
                     {
-                        NombreException nomEx = new NombreException(auxNombre)
-                        nomEx.Nombre = nomEx;
-                        throw Nombre;
+                        NombreException nomEx = new NombreException(auxNombre);
+                        nomEx.Nombre = auxNombre;
+                        throw nomEx;
                     }
 
                 }

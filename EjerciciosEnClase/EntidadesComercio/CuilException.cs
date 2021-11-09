@@ -13,7 +13,7 @@ namespace EntidadesComercio
         public double Cuil
         {
             get { return cuil; }
-            set { cuil = value;
+            set { cuil = value; }
            
         }
 
